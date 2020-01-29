@@ -67,4 +67,11 @@ describe(`index`, () => {
     const fiveElements = take(10, cubicPar([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
     expect(getValue(fiveElements)).toStrictEqual([8, 64, 216, 512, 1000]);
   });
+
+  it(`string filter example`, () => {
+    const test = 'testtesttest';
+    const testValue = filter(char => char !== 't', test);
+
+    expect(getValue(testValue).join('')).toBe('eseses');
+  });
 });
